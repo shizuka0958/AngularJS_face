@@ -1,15 +1,5 @@
-var app = angular.module('myApp',[]);
-app.controller('detailController',['$scope','$http',function($scope,$http){
-    
-    const socket = io.connect('http://localhost:8080');
+app.controller('detailController',['$scope','$http','$rootScope',function($scope,$http,$rootScope){
+    console.log('--- detailController ---'); 
 
-    socket.on('connect', function (data) {
-        socket.emit('get times');
-        socket.on('get times', function (data) {
-            console.log('get times:' + data.times); 
-            $scope.times = data.times+2;
-            console.log($scope.times);
-            $scope.$apply();
-        });
-    });
+    socket.emit('get times');
 }])
