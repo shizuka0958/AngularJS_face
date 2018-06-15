@@ -1,0 +1,19 @@
+{
+  "name": "mokaVision",
+  "version": "1.0.0",
+  "description": "moka vision app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package-app": "electron-packager ./ mokaVision --platform=darwin --arch=x64 --out ./dist --version 1.7.8 --overwrite",
+    "package-dmg": "electron-installer-dmg ./dist/mokaVision-darwin-x64/mokaVision.app mokaVision --out=./dist/mokaVision-darwin-x64"
+  },
+  "repository": "",
+  "keywords": [
+    "moka"
+  ],
+  "author": "moka",
+  "devDependencies": {
+    "electron": "1.7.8"
+  }
+}
