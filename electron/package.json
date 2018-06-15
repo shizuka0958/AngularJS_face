@@ -1,0 +1,28 @@
+{
+  "name": "electron-quick-start",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package-app": "electron-packager ./ mokaVision --platform=darwin --arch=x64 --out ./dist --version 1.7.8 --overwrite",
+    "package-dmg": "electron-installer-dmg ./dist/mokaVision-darwin-x64/mokaVision.app mokaVision --out=./dist/mokaVision-darwin-x64"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "1.7.8",
+    "electron-packager": "10.1.0"
+  },
+  "dependencies": {
+    "electron-installer-dmg": "^1.0.0"
+  }
+}
